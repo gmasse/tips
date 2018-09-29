@@ -1,5 +1,6 @@
 # PimpMyMacOS
 
+```
 cd Downloads/
 curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.5.3.tar.bz2
 tar zxvf MacPorts-2.5.3.tar.bz2
@@ -43,3 +44,4 @@ TODO: copy solarized
  1584  port install pwgen
    384  port install terraform
   410  port install py-novaclient
+  ```
