@@ -1,3 +1,4 @@
 # PimpMyMacOS
 
-[Dev Env: Vim/Python/NodeJS](https://github.com/gmasse/PimpMyMacOS/wiki)
+* [Set up a Dev Enviroment](https://github.com/gmasse/PimpMyMacOS/tree/master/Terminal)
+* [OpenStack tips](https://github.com/gmasse/PimpMyMacOS/tree/master/OpenStack)
