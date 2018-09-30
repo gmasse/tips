@@ -14,3 +14,5 @@ Copy the following line to your openrc file:
 ```
 export OS_PASSWORD=$(security find-generic-password -a ${OS_USERNAME} -s "OVH Public Cloud" -w)
 ```
+
+More information: https://www.netmeister.org/blog/keychain-passwords.html
