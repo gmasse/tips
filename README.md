@@ -1,4 +1,4 @@
-# PimpMyMacOS
+# My Tips
 
-* [My Dev Environment](https://github.com/gmasse/PimpMyMacOS/tree/master/Terminal)
-* [OpenStack tips](https://github.com/gmasse/PimpMyMacOS/tree/master/OpenStack)
+* [My MacOS Dev Environment](https://github.com/gmasse/tips/tree/master/MacOSTerminal)
+* [OpenStack tips](https://github.com/gmasse/tips/tree/master/OpenStack)
