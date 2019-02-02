@@ -26,7 +26,7 @@ fi
 # if no password found in keychain, ask directly from command line
 if [ -z $OS_PASSWORD ]
 then
-    echo "Please enter OpenStack Password for User=$OS_PASSWORD: "
+    echo "Please enter OpenStack Password for User=$OS_USERNAME: "
     read -sr OS_PASSWORD_INPUT
     export OS_PASSWORD=$OS_PASSWORD_INPUT
 fi
