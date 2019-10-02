@@ -10,11 +10,17 @@ PATH=/usr/bin:/usr/sbin:/bin:/sbin ./configure --enable-readline --prefix=$HOME/
 make
 make install
 
-echo 'export PATH=$HOME/MacPorts/bin:$PATH' >> ~/.bash_profile
+echo 'export PATH=$HOME/MacPorts/bin:$HOME/MacPorts/sbin:$PATH' >> ~/.bash_profile
+echo 'export MANPATH=$HOME/MacPorts/share/man:$MANPATH' >> ~/.bash_profile
 source ~/.bash_profile
 
 port -v selfupdate
-port install htop vim wget inetutils pwgen mtr
+port install htop wget pwgen
+
+port install mtr
+sudo chown root /sbin/mtr-packet
+sudo chmod 4755 /usr/local/sbin/mtr-packet
+
 
 chsh -s /bin/zsh
 
@@ -46,4 +52,8 @@ TODO: copy solarized
   648  port install npm6
    384  port install terraform
   410  port install py-novaclient
+  
+  
+TODO: port install inetutils #not installing, as non-root user  
+  
 ```
