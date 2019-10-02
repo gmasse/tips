@@ -1,17 +1,20 @@
 # Vim/Python/NodeJS
 
 ```
+mkdir ~/MacPorts
 cd Downloads/
-curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.5.3.tar.bz2
-tar zxvf MacPorts-2.5.3.tar.bz2
-cd
-mkdir MacPorts
-cd Downloads/MacPorts-2.5.3
+curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.6.0.tar.bz2
+tar zxvf MacPorts-2.6.0.tar.bz2
+cd MacPorts-2.6.0
 PATH=/usr/bin:/usr/sbin:/bin:/sbin ./configure --enable-readline --prefix=$HOME/MacPorts --with-no-root-privileges
 make
 make install
 
-port install htop
+echo 'export PATH=$HOME/MacPorts/bin:$PATH' >> ~/.bash_profile
+source ~/.bash_profile
+
+port -v selfupdate
+port install htop vim wget inetutils pwgen mtr
 
 chsh -s /bin/zsh
 
@@ -36,14 +39,11 @@ mkdir colors
 TODO: copy solarized
 
 
-  135  port install vim
-  344  port install wget
-  687  port install inetutils
+
   415  port install python37
   420  port install py37-pip
   594  port install nodejs8
   648  port install npm6
- 1584  port install pwgen
    384  port install terraform
   410  port install py-novaclient
 ```
