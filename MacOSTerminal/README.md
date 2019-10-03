@@ -15,7 +15,7 @@ echo 'export MANPATH=$HOME/MacPorts/share/man:$MANPATH' >> ~/.bash_profile
 source ~/.bash_profile
 
 port -v selfupdate
-port install htop wget pwgen
+port install htop wget pwgen colordiff
 
 port install mtr
 sudo chown root /sbin/mtr-packet
