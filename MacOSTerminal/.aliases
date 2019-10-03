@@ -1,9 +1,10 @@
-alias ls='ls -G'                 # Colorize the ls output
-alias ll='ls -la'                # Use a long listing format
-alias diff='colordiff'           # Colorize the diff output
-alias egrep='egrep --color=auto' # Colorize the grep output
-alias fgrep='fgrep --color=auto' # Colorize the grep output
-alias grep='grep --color=auto'   # Colorize the grep output
-alias mv='mv -i'                 # Ask for confirmation
-alias cp='cp -i'                 # Ask for confirmation
-alias ln='ln -i'                 # Ask for confirmation
+alias ls='ls -G'                   # Colorize the ls output
+alias ll='ls -la'                  # Use a long listing format
+alias diff='colordiff'             # Colorize the diff output
+alias egrep='egrep --color=auto'   # Colorize the grep output
+alias fgrep='fgrep --color=auto'   # Colorize the grep output
+alias grep='grep --color=auto'     # Colorize the grep output
+alias mv='mv -i'                   # Ask for confirmation
+alias cp='cp -i'                   # Ask for confirmation
+alias ln='ln -i'                   # Ask for confirmation
+alias mtr='mtr -z --displaymode=1' # Display stripchart and AS numbers
