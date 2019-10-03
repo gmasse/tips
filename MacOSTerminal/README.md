@@ -10,8 +10,9 @@ PATH=/usr/bin:/usr/sbin:/bin:/sbin ./configure --enable-readline --prefix=$HOME/
 make
 make install
 
-echo 'export PATH=$HOME/MacPorts/bin:$HOME/MacPorts/sbin:$PATH' >> ~/.bash_profile
-echo 'export MANPATH=$HOME/MacPorts/share/man:$MANPATH' >> ~/.bash_profile
+echo 'export PATH=$HOME/MacPorts/bin:$HOME/MacPorts/sbin:$PATH
+export MANPATH=$HOME/MacPorts/share/man:$MANPATH
+if [ -f $HOME/.aliases ]; then . $HOME/.aliases; fi' >> ~/.bash_profile
 source ~/.bash_profile
 
 port -v selfupdate
