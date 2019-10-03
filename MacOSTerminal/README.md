@@ -32,19 +32,18 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 vi .zshrc
 
+
 port install vim
+mkdir -p ~/.vim/colors
+curl -o ~/.vim/colors/solarized.vim https://raw.githubusercontent.com/altercation/solarized/master/vim-colors-solarized/colors/solarized.vim
 
 mkdir -p ~/.vim/pack/dist/start/
 cd ~/.vim/pack/dist/start/
 git clone https://github.com/vim-airline/vim-airline
 git clone https://github.com/vim-airline/vim-airline-themes
 git clone https://github.com/ConradIrwin/vim-bracketed-paste
-  
-cd ~/.vim
-mkdir colors
 
-TODO: copy solarized
-
+curl -o ~/.vim/vimrc https://raw.githubusercontent.com/gmasse/tips/master/MacOSTerminal/.vimrc
 
 
   415  port install python37
