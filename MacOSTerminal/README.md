@@ -55,5 +55,16 @@ curl -o ~/.vim/vimrc https://raw.githubusercontent.com/gmasse/tips/master/MacOST
   
   
 TODO: port install inetutils #not installing, as non-root user  
-  
+
+
+
+
+*** GIT ***
+
+git config --global core.editor "vi"
+git config user.email "g-dev@masse.me"
+git config user.name "Germain Masseé
+git config user.name "Germain Masse"
+git config core.sshCommand 'ssh -i ~/.ssh/id_rsa_github'
+
 ```
