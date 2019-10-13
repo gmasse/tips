@@ -37,3 +37,12 @@ fi
 ```
 
 More information: https://www.netmeister.org/blog/keychain-passwords.html
+
+
+
+## Quickstart ##
+```
+source openrc.sh
+openstack keypair create --public-key ~/.ssh/id_rsa_new2.pub mykeyname
+nova boot --flavor "s1-8" --image "Ubuntu 18.04" --key-name "mykeyname" myinstancename
+```
