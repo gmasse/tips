@@ -61,9 +61,18 @@ TODO: port install inetutils #not installing, as non-root user
 
 *** GIT ***
 
-git config --global core.editor "vi"
-git config --global core.sshCommand 'ssh -i ~/.ssh/id_rsa_github'
+local configurtion:
+
+git config core.editor "vi"
+git config core.sshCommand 'ssh -i ~/.ssh/id_rsa_github'
 git config user.email "g-dev@masse.me"
 git config user.name "Germain Masse"
+
+OR global configuration:
+
+git config --global core.editor "vi"
+git config --global core.sshCommand 'ssh -i ~/.ssh/id_rsa_github'
+git config --global user.email "g-dev@masse.me"
+git config --global user.name "Germain Masse"
 
 ```
