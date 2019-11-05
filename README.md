@@ -8,3 +8,5 @@
 
 * Use a flashy prompt:
 `PS1=$'\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\e[30;41m\] \u@\h \[\e[40;31m\]\xee\x82\xb0 \w \[\e[m\]\[\e[30m\]\xee\x82\xb0 \[\e[00m\]'`
+![Screenshot](images/production_prompt.png?raw=true)
+
