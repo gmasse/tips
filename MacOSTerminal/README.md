@@ -21,7 +21,7 @@ port install htop wget pwgen colordiff
 # In non-root mode, there is an issue with bsdtar (failing with error 'Cannot restore xattr:com.apple.decmpfs')
 # The trick is to configure macports with no hfscompression then install libarchive (then re-enable hfscompression)
 # https://trac.macports.org/ticket/56563#comment:29
-# To reinstall previously installed packages with hfscompression: port upgrade --force `port -q installed | cut -d' ' -f 3 | xargs`
+# To reinstall previously installed packages with hfscompression: port upgrade --force `port -q installed | grep -v libarchive | cut -d' ' -f 3 | xargs`
 
 
 port install mtr
