@@ -3,9 +3,9 @@
 ```
 mkdir ~/MacPorts
 cd Downloads/
-curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.6.0.tar.bz2
-tar zxvf MacPorts-2.6.0.tar.bz2
-cd MacPorts-2.6.0
+curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.6.2.tar.bz2
+tar zxvf MacPorts-2.6.2.tar.bz2
+cd MacPorts-2.6.2
 PATH=/usr/bin:/usr/sbin:/bin:/sbin ./configure --enable-readline --prefix=$HOME/MacPorts --with-no-root-privileges
 make
 make install
@@ -17,6 +17,12 @@ source ~/.bash_profile
 
 port -v selfupdate
 port install htop wget pwgen colordiff
+
+# In non-root mode, there is an issue with bsdtar (failing with error 'Cannot restore xattr:com.apple.decmpfs')
+# The trick is to configure macports with no hfscompression then install libarchive (then re-enable hfscompression)
+# https://trac.macports.org/ticket/56563#comment:29
+# To reinstall previously installed packages with hfscompression: port upgrade --force `port -q installed | cut -d' ' -f 3 | xargs`
+
 
 port install mtr
 sudo chown root /sbin/mtr-packet
