@@ -1,0 +1,7 @@
+## Linux
+Fixing USB device name over reboot (base on physical USB port)a
+```
+$ cat /etc/udev/rules.d/90-ttyUSB.rules
+KERNEL=="ttyUSB*", KERNELS=="1-1.2", NAME="ttyUSB0", SYMLINK+="esp32_dev", GROUP="platformio"
+KERNEL=="ttyUSB*", KERNELS=="1-1.3", NAME="ttyUSB1", SYMLINK+="esp32_prod"
+```
