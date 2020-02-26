@@ -28,8 +28,8 @@ port install htop wget pwgen colordiff
 
 
 port install mtr
-sudo chown root /sbin/mtr-packet
-sudo chmod 4755 /usr/local/sbin/mtr-packet
+sudo chown root $(which mtr-packet)
+#sudo chmod 4755 $(which mtr-packet)
 
 
 chsh -s /bin/zsh
