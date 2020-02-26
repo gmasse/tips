@@ -5,8 +5,8 @@
 # endpoint for all services the user/tenant has access to - including nova,
 # glance, keystone, swift.
 #
-export OS_AUTH_URL=https://auth.cloud.ovh.net/v2.0/
-export OS_IDENTITY_API_VERSION=2
+export OS_AUTH_URL=https://auth.cloud.ovh.net/v3.0/
+export OS_IDENTITY_API_VERSION=3
 
 # With the addition of Keystone we have standardized on the term **tenant**
 # as the entity that owns the resources.
