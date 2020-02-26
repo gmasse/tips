@@ -29,7 +29,7 @@ port install htop wget pwgen colordiff
 
 port install mtr
 sudo chown root $(which mtr-packet)
-#sudo chmod 4755 $(which mtr-packet)
+sudo chmod 4755 $(which mtr-packet)
 
 
 chsh -s /bin/zsh
