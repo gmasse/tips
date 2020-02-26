@@ -29,6 +29,15 @@ then
         if security find-generic-password -a ${OS_USERNAME} -s "OVH Public Cloud" >/dev/null 2>&1;
         then
             export OS_PASSWORD=$(security find-generic-password -a ${OS_USERNAME} -s "OVH Public Cloud" -w)
+        else
+            while true; do
+                echo -n "Do you wish to store the password in MacOS keychain? (y/N) "
+                read yn
+                case $yn in
+                    [Yy]* ) security add-generic-password -a ${OS_USERNAME} -s "OVH Public Cloud" -w ; export OS_PASSWORD=$(security find-generic-password -a ${OS_USERNAME} -s "OVH Public Cloud" -w) ; break;;
+                    * ) break;;
+                esac
+            done
         fi
     fi
 fi
