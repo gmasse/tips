@@ -32,6 +32,11 @@ sudo chown root $(which mtr-packet)
 sudo chmod 4755 $(which mtr-packet)
 
 
+Use MacOS keychain to store SSH passphrase:
+echo -n "Host *\n    UseKeychain yes\n" >> ~/.ssh/config
+[https://apple.stackexchange.com/a/264974]
+
+
 chsh -s /bin/zsh
 
 TODO:how to install oh my zsh
