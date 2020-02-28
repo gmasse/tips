@@ -11,3 +11,11 @@ KERNEL=="ttyUSB*", KERNELS=="1-1.3", NAME="ttyUSB1", SYMLINK+="esp32_prod"
 $ .platformio/packages/tool-esptoolpy/esptool.py --chip esp32 --port /dev/ttyUSB0 erase_flash
 $ platformio device monitor -p /dev/ttyUSB0 -b 115200
 ```
+
+### Converting Backtrace address
+```
+$ for addr in $(cat backtrace.txt); do \
+~/.platformio/packages/toolchain-xtensa32/bin/xtensa-esp32-elf-addr2line -pfiaC \
+-e .pio/build/fm-devkit/firmware.elf $addr ; \
+done
+```
