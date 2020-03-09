@@ -1,6 +1,8 @@
 # Vim/Python/NodeJS
 
-Terminal Font: Input Mono Narrow Extra-light [Preview](https://input.fontbureau.com/preview/?size=12&language=python&theme=solarized-dark&family=InputMono&width=300&weight=200&line-height=1.2&a=0&g=0&i=0&l=0&zero=slash&asterisk=0&braces=straight&preset=default&customize=please)
+Editor Font: JetBrains Mono [Download](https://www.jetbrains.com/lp/mono/)
+
+(Optional) Terminal Font: Input Mono Narrow Extra-light [Preview](https://input.fontbureau.com/preview/?size=12&language=python&theme=solarized-dark&family=InputMono&width=300&weight=200&line-height=1.2&a=0&g=0&i=0&l=0&zero=slash&asterisk=0&braces=straight&preset=default&customize=please)
 [Download](https://input.fontbureau.com/download/index.html?customize&fontSelection=fourStyleFamily&regular=InputMonoNarrow-ExtraLight&italic=InputMonoNarrow-ExtraLightItalic&bold=InputMonoNarrow-Medium&boldItalic=InputMonoNarrow-MediumItalic&a=0&g=0&i=0&l=0&zero=slash&asterisk=0&braces=straight&preset=default&line-height=1.2)
 
 ```
@@ -51,13 +53,18 @@ port install vim
 mkdir -p ~/.vim/colors
 curl -o ~/.vim/colors/solarized.vim https://raw.githubusercontent.com/altercation/solarized/master/vim-colors-solarized/colors/solarized.vim
 
-mkdir -p ~/.vim/pack/dist/start/
-cd ~/.vim/pack/dist/start/
-git clone https://github.com/vim-airline/vim-airline
-git clone https://github.com/vim-airline/vim-airline-themes
-git clone https://github.com/ConradIrwin/vim-bracketed-paste
 
+# Installing vim packages (editorconfig, vim-airline w/ Solarized theme)
+mkdir -p ~/.vim/pack/dist/start/
+mkdir -p ~/.vim/pack/themes/opt/
+git clone https://github.com/editorconfig/editorconfig-vim.git ~/.vim/pack/dist/start/editorconfig-vim
+git clone https://github.com/ConradIrwin/vim-bracketed-paste ~/.vim/pack/dist/start/vim-bracketed-paste
+git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline
+git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/dist/start/vim-airline-themes
+git clone https://github.com/altercation/vim-colors-solarized ~/.vim/pack/themes/opt/vim-colors-solarized
+#curl -fsSL -o ~/.vimrc https://raw.githubusercontent.com/gmasse/openstack_docker_env/master/vimrc
 curl -o ~/.vim/vimrc https://raw.githubusercontent.com/gmasse/tips/master/MacOSTerminal/.vimrc
+
 
 
   415  port install python37
