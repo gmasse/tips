@@ -33,13 +33,15 @@ port -v selfupdate
 ```
 Let's install some packages:
 ```
-port install htop wget pwgen colordiff vim
+port install htop curl wget pwgen colordiff vim
 ```
 ### Awesome Packages
 ```
 port install python37 py37-pip
 port install nodejs12 npm6
 port install terraform-0.12
+port install autoconf automake bison flex gmake
+port install cmake ninja # esp-idf
 ```
 TODO: port install inetutils #not installing, as non-root user  
 
