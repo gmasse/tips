@@ -1,5 +1,12 @@
 # MacOS development environment tutorial
 
+##### Table of Contents
+1. [Fonts](#fonts)
+2. [Macports (as non-root)](#macports-as-non-root)
+3. [Zsh prompt (oh-my-zsh powered)](#construction-zsh-prompt-oh-my-zsh-powered-construction)
+4. [SSH](#ssh)
+5. [Git](#git)
+
 ## Fonts
 Editor Font: JetBrains Mono [Download](https://www.jetbrains.com/lp/mono/)
 
@@ -102,7 +109,7 @@ Use MacOS keychain to store SSH passphrase ([reference](https://apple.stackexcha
 echo -n "Host *\n    UseKeychain yes\n" >> ~/.ssh/config
 ```
 
-## GIT
+## Git
 
 Local configuration:
 ```
