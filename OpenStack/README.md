@@ -41,6 +41,13 @@ More information: https://www.netmeister.org/blog/keychain-passwords.html
 
 
 ## Quickstart ##
+OpenStack CLI installation:
+```
+python3 -m venv venv
+source venv/bin/activate
+pip install python-openstackclient
+```
+Resource provisionning:
 ```
 source openrc.sh
 openstack keypair create --public-key ~/.ssh/id_rsa_new2.pub mykeyname
