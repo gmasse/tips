@@ -47,9 +47,10 @@ python3 -m venv venv
 source venv/bin/activate
 pip install python-openstackclient
 ```
-Resource provisionning:
+Resource provisioning:
 ```
 source openrc.sh
-openstack keypair create --public-key ~/.ssh/id_rsa_new2.pub mykeyname
-nova boot --flavor "s1-8" --image "Ubuntu 18.04" --key-name "mykeyname" myinstancename
+openstack keypair create --public-key ~/.ssh/id_rsa_new.pub mykey
+curl -O https://raw.githubusercontent.com/gmasse/tips/master/OpenStack/cloudinit.dev-docker
+openstack server create --flavor "s1-2" --image "Ubuntu 18.04" --key-name "mykey" --user-data cloudinit.dev-docker myinstancename
 ```
