@@ -119,6 +119,7 @@ git config core.editor "vi"
 git config core.sshCommand 'ssh -i ~/.ssh/id_rsa_github'
 git config user.email "g-dev@masse.me"
 git config user.name "Germain Masse"
+git config rebase.autosquash true
 ```
 Or Global configuration:
 ```
@@ -126,4 +127,5 @@ git config --global core.editor "vi"
 git config --global core.sshCommand 'ssh -i ~/.ssh/id_rsa_github'
 git config --global user.email "g-dev@masse.me"
 git config --global user.name "Germain Masse"
+git config --global rebase.autosquash true
 ```
