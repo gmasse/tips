@@ -17,16 +17,16 @@ Editor Font: JetBrains Mono [Download](https://www.jetbrains.com/lp/mono/)
 ```
 mkdir ~/MacPorts
 cd Downloads/
-curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.6.2.tar.bz2
-tar zxvf MacPorts-2.6.2.tar.bz2
-cd MacPorts-2.6.2
+curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.6.4.tar.bz2
+tar zxvf MacPorts-2.6.4.tar.bz2
+cd MacPorts-2.6.4
 PATH=/usr/bin:/usr/sbin:/bin:/sbin ./configure --enable-readline --prefix=$HOME/MacPorts --with-no-root-privileges
 make
 make install
 
 echo 'export PATH=$HOME/MacPorts/bin:$HOME/MacPorts/sbin:$PATH
 export MANPATH=$HOME/MacPorts/share/man:$MANPATH
-if [ -f $HOME/.aliases ]; then . $HOME/.aliases; fi' >> ~/.bash_profile
+if [ -f $HOME/.aliases ]; then . $HOME/.aliases; fi' >> ~/.zshrc
 source ~/.bash_profile
 
 port -v selfupdate
