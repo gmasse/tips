@@ -27,7 +27,7 @@ make install
 echo 'export PATH=$HOME/MacPorts/bin:$HOME/MacPorts/sbin:$PATH
 export MANPATH=$HOME/MacPorts/share/man:$MANPATH
 if [ -f $HOME/.aliases ]; then . $HOME/.aliases; fi' >> ~/.zshrc
-source ~/.bash_profile
+source ~/.zshrc
 
 port -v selfupdate
 ```
