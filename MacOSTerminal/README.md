@@ -26,9 +26,7 @@ make install
 
 echo 'export PATH=$HOME/MacPorts/bin:$HOME/MacPorts/sbin:$PATH
 export MANPATH=$HOME/MacPorts/share/man:$MANPATH' >> ~/.zprofile
-echo 'if [ -f $HOME/.aliases ]; then . $HOME/.aliases; fi' >> ~/.zlogin
-
-source ~/.zprofile ~/.zlogin
+source ~/.zprofile
 
 port -v selfupdate
 ```
@@ -76,6 +74,14 @@ sudo chmod 4755 $(which mtr-packet)
 Change to zsh (if needed):
 ```
 chsh -s /bin/zsh
+```
+
+## Aliases
+Configure default aliases for login shell:
+```
+curl https://raw.githubusercontent.com/gmasse/tips/master/MacOSTerminal/.aliases > ~/.aliases
+echo 'if [ -f $HOME/.aliases ]; then . $HOME/.aliases; fi' >> ~/.zlogin
+source ~/.zlogin
 ```
 
 ### Oh-my-Zsh
