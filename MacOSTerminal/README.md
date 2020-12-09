@@ -25,9 +25,10 @@ make
 make install
 
 echo 'export PATH=$HOME/MacPorts/bin:$HOME/MacPorts/sbin:$PATH
-export MANPATH=$HOME/MacPorts/share/man:$MANPATH
-if [ -f $HOME/.aliases ]; then . $HOME/.aliases; fi' >> ~/.zshrc
-source ~/.zshrc
+export MANPATH=$HOME/MacPorts/share/man:$MANPATH' >> ~/.zprofile
+echo 'if [ -f $HOME/.aliases ]; then . $HOME/.aliases; fi' >> ~/.zlogin
+
+source ~/.zprofile ~/.zlogin
 
 port -v selfupdate
 ```
