@@ -24,8 +24,7 @@ PATH=/usr/bin:/usr/sbin:/bin:/sbin ./configure --enable-readline --prefix=$HOME/
 make
 make install
 
-echo 'export PATH=$HOME/MacPorts/bin:$HOME/MacPorts/sbin:$PATH
-export MANPATH=$HOME/MacPorts/share/man:$MANPATH' >> ~/.zprofile
+curl https://raw.githubusercontent.com/gmasse/tips/master/MacOSTerminal/.zprofile > ~/.zprofile
 source ~/.zprofile
 
 port -v selfupdate
