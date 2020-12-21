@@ -121,3 +121,8 @@ git config --global user.email "g-dev@masse.me"
 git config --global user.name "Germain Masse"
 git config --global rebase.autosquash true
 ```
+Add some Global OS dependant configuration:
+```
+curl https://raw.githubusercontent.com/gmasse/tips/master/MacOSTerminal/macos-gitignore > ~/.gitignore
+git config --global core.excludesfile ~/.gitignore
+```
