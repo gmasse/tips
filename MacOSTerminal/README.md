@@ -75,6 +75,11 @@ sudo chown root $(which mtr-packet)
 sudo chmod 4755 $(which mtr-packet)
 ```
 
+#### python cryptography package
+```
+env LDFLAGS="-L$HOME/MacPorts/lib" CFLAGS="-I/$HOME/MacPorts/include" pip install cryptography
+```
+
 ## Zsh prompt (oh-my-zsh powered)
 Change to zsh (if needed):
 ```
