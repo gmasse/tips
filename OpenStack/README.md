@@ -50,12 +50,17 @@ More information: https://www.netmeister.org/blog/keychain-passwords.html
 
 
 ## Quickstart ##
-OpenStack CLI installation:
+OpenStack CLI installation (Virtual Environment's style):
 ```
 python3 -m venv venv
 source venv/bin/activate
 pip install python-openstackclient
 ```
+... or Python user install directory's style:
+```
+pip install --user python-openstackclient gnureadline
+```
+
 Resource provisioning:
 ```
 source openrc.sh
