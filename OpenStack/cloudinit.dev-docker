@@ -10,6 +10,8 @@ apt:
         docker-ce.list:
             source: deb [arch=amd64] https://download.docker.com/linux/ubuntu $RELEASE stable
             keyid: 0EBFCD88
+groups:
+  - docker: ubuntu
 system_info:
     default_user:
         name: "ubuntu"
