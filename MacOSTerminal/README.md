@@ -17,9 +17,9 @@ Editor Font: JetBrains Mono [Download](https://www.jetbrains.com/lp/mono/)
 ```
 mkdir ~/MacPorts
 cd Downloads/
-curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.7.1.tar.bz2
-tar zxvf MacPorts-2.7.1.tar.bz2
-cd MacPorts-2.7.1
+curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.7.2.tar.bz2
+tar zxvf MacPorts-2.7.2.tar.bz2
+cd MacPorts-2.7.2
 PATH=/usr/bin:/usr/sbin:/bin:/sbin ./configure --enable-readline --prefix=$HOME/MacPorts --with-no-root-privileges
 make
 make install
