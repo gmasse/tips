@@ -35,11 +35,11 @@ port install htop curl wget pwgen colordiff vim
 ```
 ### Awesome Packages
 ```
-port install python38 py38-pip
-port select --set python python38
-port select --set python3 python38
-port select --set pip pip38
-port select --set pip3 pip38
+port install python39 py39-pip
+port select --set python python39
+port select --set python3 python39
+port select --set pip pip39
+port select --set pip3 pip39
 
 port install nodejs12 npm6
 port install terraform-0.12
