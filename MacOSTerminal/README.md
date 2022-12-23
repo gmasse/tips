@@ -6,6 +6,8 @@
 3. [Zsh prompt (oh-my-zsh powered)](#zsh-prompt-oh-my-zsh-powered)
 4. [SSH](#ssh)
 5. [Git](#git)
+6. [FAQ](#faq)
+
 
 ## Fonts
 Editor Font: JetBrains Mono [Download](https://www.jetbrains.com/lp/mono/)
@@ -126,3 +128,24 @@ Add some Global OS dependant configuration:
 curl https://raw.githubusercontent.com/gmasse/tips/master/MacOSTerminal/macos-gitignore > ~/.gitignore
 git config --global core.excludesfile ~/.gitignore
 ```
+
+## FAQ
+### How to update MacPorts after a major system update?
+Update Xcode and command line tools.
+Download, compile an reinstall MacPorts [as seen before](#macports-as-non-root).
+Reinstall all ports:
+```
+cd Downloads
+port selfupdate
+port -qv installed > myports.txt
+port echo requested | cut -d ' ' -f 1 | uniq > requested.txt
+port -f uninstall installed
+port reclaim
+curl --location --remote-name https://github.com/macports/macports-contrib/raw/master/restore_ports/restore_ports.tcl
+chmod +x restore_ports.tcl
+./restore_ports.tcl -p $HOME/MacPorts myports.txt
+port unsetrequested installed
+xargs port setrequested < requested.txt
+rm myports.txt requested.txt restore_ports.tcl
+```
+If you encounter this warning "The Xcode Command Line Tools package appears to be installed, but its receipt appears to be missing". Please follow these steps to reinstall command line tools : https://trac.macports.org/wiki/ProblemHotlist#reinstall-clt
