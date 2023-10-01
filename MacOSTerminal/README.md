@@ -2,11 +2,12 @@
 
 ##### Table of Contents
 1. [Fonts](#fonts)
-2. [Macports (as non-root)](#macports-as-non-root)
-3. [Zsh prompt (oh-my-zsh powered)](#zsh-prompt-oh-my-zsh-powered)
-4. [SSH](#ssh)
-5. [Git](#git)
-6. [FAQ](#faq)
+2. [Homebrew (as non-root)](#homebrew-as-non-root)
+3. [Macports (as non-root)](#macports-as-non-root)
+4. [Zsh prompt (oh-my-zsh powered)](#zsh-prompt-oh-my-zsh-powered)
+5. [SSH](#ssh)
+6. [Git](#git)
+7. [FAQ](#faq)
 
 
 ## Fonts
@@ -15,7 +16,27 @@ Editor Font: JetBrains Mono [Download](https://www.jetbrains.com/lp/mono/)
 (Optional) Terminal Font: Input Mono Narrow Extra-light [Preview](https://input.fontbureau.com/preview/?size=12&language=python&theme=solarized-dark&family=InputMono&width=300&weight=200&line-height=1.2&a=0&g=0&i=0&l=0&zero=slash&asterisk=0&braces=straight&preset=default&customize=please)
 [Download](https://input.fontbureau.com/download/index.html?customize&fontSelection=fourStyleFamily&regular=InputMonoNarrow-ExtraLight&italic=InputMonoNarrow-ExtraLightItalic&bold=InputMonoNarrow-Medium&boldItalic=InputMonoNarrow-MediumItalic&a=0&g=0&i=0&l=0&zero=slash&asterisk=0&braces=straight&preset=default&line-height=1.2)
 
+## Homebrew (as non-root)
+```
+mkdir -p ~/homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+curl https://raw.githubusercontent.com/gmasse/tips/master/MacOSTerminal/.zprofile > ~/.zprofile
+source ~/.zprofile
+```
+Let's install some packages:
+```
+brew install -s mtr htop wget pwgen colordiff
+```
+
+### Homebrew tips or issues
+#### mtr
+`mtr` can be setuid to avoid using `sudo`:
+```
+sudo chown root $(which mtr-packet)
+sudo chmod 4755 $(which mtr-packet)
+```
+
 ## Macports (as non-root)
+Alternatively to Homebrew
 ```
 mkdir ~/MacPorts
 cd ~/Downloads/
